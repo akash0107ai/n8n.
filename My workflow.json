@@ -1,0 +1,66 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "0ea16af4-ff02-48e3-8689-8a690de4e8e8",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "sendTo": "arif2007smart@gmail.com",
+        "subject": "Dear arif",
+        "message": "Hi arif, how are you  ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "48ab357e-1a32-46ad-b214-e647a94585ca",
+      "name": "Send a message",
+      "webhookId": "f3bc8788-8952-443f-b0ae-637c1915ca44",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "uC7VOyIgFGSpHUhB",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "4630fceb-6cf7-4d1d-8407-48060ef37df7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "281b89a865f9ad4a9e3ea89a983e652659f24b75d23bac550df081663f9a1a09"
+  },
+  "nodeGroups": [],
+  "id": "plXlux45rdGFyZpi",
+  "tags": []
+}
